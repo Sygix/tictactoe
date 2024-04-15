@@ -16,9 +16,9 @@ export default function Game({
   return (
     <>
       <Room gameId={gameId}>
-                <PeersList />
-                <GameBoard />
-            </Room>
+          <PeersList />
+          <GameBoard />
+      </Room>
     </>
   );
 }
