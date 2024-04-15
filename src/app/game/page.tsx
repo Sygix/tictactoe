@@ -13,12 +13,12 @@ export default function Game({
 
     if (!gameId) return (<div>Invalid Game ID</div>);
   
-    return (
-        <main className="flex min-h-screen flex-col items-center p-4">
-            <Room gameId={gameId}>
+  return (
+    <>
+      <Room gameId={gameId}>
                 <PeersList />
                 <GameBoard />
             </Room>
-        </main>
-    );
+    </>
+  );
 }

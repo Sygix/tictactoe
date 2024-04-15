@@ -30,7 +30,6 @@ const GameBoard = () => {
 
     useEffect(() => {
         const playersStillConnected = players.filter(player => peers.some(peer => peer.id === player.peer.id));
-        console.log('playersStillConnected : ', playersStillConnected);
         if (playersStillConnected.length < 2) {
             setBoard(Array(9).fill(null));
             setIsXNext(true);
@@ -72,12 +71,12 @@ const GameBoard = () => {
         if (board[index] || calculateWinner(board)) {
             // Case déjà occupée ou partie terminée
             return;
-          }
-      
-          const newBoard = [...board];
-          newBoard[index] = isXNext ? 'X' : 'O';
-          setBoard(newBoard);
-          setIsXNext(!isXNext);
+        }
+    
+        const newBoard = [...board];
+        newBoard[index] = isXNext ? 'X' : 'O';
+        setBoard(newBoard);
+        setIsXNext(!isXNext);
     };
 
     return (
